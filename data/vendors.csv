@@ -1,0 +1,11 @@
+vendor_id,name,country,tax_id_type,tax_id,state,currency,standard_tax_rate_pct,payment_terms_days,category,address,status
+V001,Sri Lakshmi Office Supplies,IN,GSTIN,36DAJHH2181V1ZD,Telangana,INR,18,30,Stationery & office supplies,"Shop 12, Abids Road, Hyderabad, Telangana 500001",active
+V002,Bharat IT Solutions Pvt Ltd,IN,GSTIN,29BACGH8908G1ZN,Karnataka,INR,18,45,IT hardware & AMC,"4th Floor, Embassy Tech Square, Outer Ring Road, Bengaluru, Karnataka 560103",active
+V003,Deccan Logistics Pvt Ltd,IN,GSTIN,36UPHRV4026L1Z8,Telangana,INR,12,15,Freight & logistics,"Survey 88, Medchal Road, Kompally, Hyderabad, Telangana 500014",active
+V004,Kaveri Facility Services LLP,IN,GSTIN,33EGLDC6155W1Z8,Tamil Nadu,INR,18,30,Facility services,"No. 27, Anna Salai, Teynampet, Chennai, Tamil Nadu 600018",active
+V005,Nova Print & Packaging,IN,GSTIN,27BRUDN1849M1ZJ,Maharashtra,INR,12,30,Printing & packaging,"Gala 6, Bhosari MIDC, Pune, Maharashtra 411026",active
+V006,Charminar Catering Co.,IN,GSTIN,36GCBHK1316J1ZE,Telangana,INR,5,15,Catering,"8-2-120, Road No. 2, Banjara Hills, Hyderabad, Telangana 500034",active
+V101,Lone Star Office Furniture LLC,US,EIN,91-7120868,Texas,USD,8.25,30,Office furniture,"5500 N Lamar Blvd, Austin, TX 78751",active
+V102,Pacific Cloud Software Inc.,US,EIN,30-7210606,California,USD,7.25,45,Software & support,"1800 Technology Drive, San Jose, CA 95110",active
+V103,Midwest Freight Systems Inc.,US,EIN,55-4514944,Illinois,USD,6.25,30,Freight,"400 W Ontario Street, Chicago, IL 60654",active
+V104,Hudson Creative Agency LLC,US,EIN,95-5479144,New York,USD,8.875,30,Marketing & creative,"251 Park Avenue South, Floor 9, New York, NY 10010",active

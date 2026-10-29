@@ -1,0 +1,92 @@
+po_number,vendor_id,po_date,currency,line_no,sku,description,uom,quantity,unit_price
+PO-26-1006,V101,2026-08-16,USD,1,FUR-LAMP-L,LED Desk Lamp,Each,15,34.50
+PO-26-1006,V101,2026-08-16,USD,2,FUR-CAB-4D,4-Drawer File Cabinet,Each,4,189.00
+PO-26-1006,V101,2026-08-16,USD,3,FUR-DESK-60,Height-Adjustable Desk 60in,Each,1,489.00
+PO-26-1006,V101,2026-08-16,USD,4,FUR-CHAIR-E,Ergonomic Task Chair,Each,2,245.00
+PO-26-1007,V104,2026-08-21,USD,1,MKT-VID-ED,Product Video Edit (per video),Video,1,950.00
+PO-26-1007,V104,2026-08-21,USD,2,MKT-SOC-MO,Social Media Management (per month),Month,1,1800.00
+PO-26-1007,V104,2026-08-21,USD,3,MKT-PHOTO-H,Photo Shoot (half-day),Shoot,1,1200.00
+PO-26-1007,V104,2026-08-21,USD,4,MKT-CAMP-D,Campaign Design Package,Pkg,1,3200.00
+PO-26-1009,V006,2026-08-17,INR,1,CAT-LUNCH,Working Lunch (per head),Head,200,280.00
+PO-26-1015,V104,2026-08-13,USD,1,MKT-SOC-MO,Social Media Management (per month),Month,1,1800.00
+PO-26-1015,V104,2026-08-13,USD,2,MKT-VID-ED,Product Video Edit (per video),Video,1,950.00
+PO-26-1015,V104,2026-08-13,USD,3,MKT-PHOTO-H,Photo Shoot (half-day),Shoot,1,1200.00
+PO-26-1017,V102,2026-08-21,USD,1,SW-SEAT-AN,Analytics Platform Seat License (annual),Seat,1,420.00
+PO-26-1017,V102,2026-08-21,USD,2,SW-ONB-DAY,Onboarding Workshop (per day),Day,1,1500.00
+PO-26-1017,V102,2026-08-21,USD,3,SW-API-1M,API Credit Pack (1M calls),Pack,1,250.00
+PO-26-1022,V104,2026-08-24,USD,1,MKT-SOC-MO,Social Media Management (per month),Month,1,1800.00
+PO-26-1022,V104,2026-08-24,USD,2,MKT-PHOTO-H,Photo Shoot (half-day),Shoot,1,1200.00
+PO-26-1022,V104,2026-08-24,USD,3,MKT-VID-ED,Product Video Edit (per video),Video,1,950.00
+PO-26-1023,V005,2026-08-23,INR,1,PRT-BC-500,Business Cards (box of 500),Box,30,650.00
+PO-26-1023,V005,2026-08-23,INR,2,PRT-FLY-1K,Flyers A5 (per 1000),Lot,10,2400.00
+PO-26-1028,V003,2026-08-08,INR,1,LOG-PACK-K,Packing Material Kit,Kit,76,380.00
+PO-26-1028,V003,2026-08-08,INR,2,LOG-LTL,Intercity LTL Freight (per consignment),Nos,2,14500.00
+PO-26-1034,V101,2026-08-21,USD,1,FUR-CAB-4D,4-Drawer File Cabinet,Each,60,189.00
+PO-26-1034,V101,2026-08-21,USD,2,FUR-DESK-60,Height-Adjustable Desk 60in,Each,22,489.00
+PO-26-1038,V103,2026-08-29,USD,1,FRT-EXP-PK,Expedited Parcel (per package),Pkg,33,62.50
+PO-26-1038,V103,2026-08-29,USD,2,FRT-PAL-CD,"Pallet Freight, Chicago to Dallas",Pallet,5,385.00
+PO-26-1038,V103,2026-08-29,USD,3,FRT-CRATE,Custom Crating (per crate),Crate,36,140.00
+PO-26-1042,V102,2026-08-29,USD,1,SW-SEAT-AN,Analytics Platform Seat License (annual),Seat,10,420.00
+PO-26-1042,V102,2026-08-29,USD,2,SW-SUP-PRM,Premium Support Plan (annual),Plan,3,2400.00
+PO-26-1042,V102,2026-08-29,USD,3,SW-ONB-DAY,Onboarding Workshop (per day),Day,3,1500.00
+PO-26-1043,V103,2026-08-17,USD,1,FRT-PAL-CD,"Pallet Freight, Chicago to Dallas",Pallet,2,385.00
+PO-26-1043,V103,2026-08-17,USD,2,FRT-INS-SH,Cargo Insurance (per shipment),Shipment,21,45.00
+PO-26-1049,V002,2026-08-28,INR,1,IT-LAP-14,"14in Business Laptop, i5 / 16GB / 512GB",Nos,1,58500.00
+PO-26-1049,V002,2026-08-28,INR,2,IT-MON-24,24in IPS Monitor,Nos,2,9800.00
+PO-26-1052,V002,2026-08-18,INR,1,IT-KBM-W,Wireless Keyboard & Mouse Combo,Nos,200,1450.00
+PO-26-1052,V002,2026-08-18,INR,2,IT-LAP-14,"14in Business Laptop, i5 / 16GB / 512GB",Nos,3,58500.00
+PO-26-1058,V001,2026-09-02,INR,1,STN-FILE-FS,"Box File, Foolscap",Nos,16,95.00
+PO-26-1058,V001,2026-09-02,INR,2,STN-STPL-HD,Heavy Duty Stapler,Nos,2,650.00
+PO-26-1058,V001,2026-09-02,INR,3,STN-PEN-50,"Gel Pens, Blue (box of 50)",Box,2,420.00
+PO-26-1058,V001,2026-09-02,INR,4,STN-A4-500,A4 Copier Paper 75 GSM (500 sheets),Ream,7,285.00
+PO-26-1063,V001,2026-09-06,INR,1,STN-STPL-HD,Heavy Duty Stapler,Nos,200,650.00
+PO-26-1063,V001,2026-09-06,INR,2,STN-A4-500,A4 Copier Paper 75 GSM (500 sheets),Ream,200,285.00
+PO-26-1063,V001,2026-09-06,INR,3,STN-TNR-12A,Toner Cartridge 12A Compatible,Nos,31,2850.00
+PO-26-1063,V001,2026-09-06,INR,4,STN-FILE-FS,"Box File, Foolscap",Nos,200,95.00
+PO-26-1064,V006,2026-08-31,INR,1,CAT-EVT-50,Event Catering Package (50 pax),Pkg,9,21500.00
+PO-26-1064,V006,2026-08-31,INR,2,CAT-LUNCH,Working Lunch (per head),Head,200,280.00
+PO-26-1068,V101,2026-08-20,USD,1,FUR-CHAIR-E,Ergonomic Task Chair,Each,1,245.00
+PO-26-1068,V101,2026-08-20,USD,2,FUR-LAMP-L,LED Desk Lamp,Each,1,34.50
+PO-26-1072,V101,2026-09-03,USD,1,FUR-DESK-60,Height-Adjustable Desk 60in,Each,17,489.00
+PO-26-1072,V101,2026-09-03,USD,2,FUR-CHAIR-E,Ergonomic Task Chair,Each,18,245.00
+PO-26-1073,V001,2026-08-23,INR,1,STN-PEN-50,"Gel Pens, Blue (box of 50)",Box,64,420.00
+PO-26-1076,V003,2026-09-10,INR,1,LOG-LOCAL,Local Courier Run (per trip),Trip,48,1800.00
+PO-26-1082,V104,2026-08-24,USD,1,MKT-SOC-MO,Social Media Management (per month),Month,1,1800.00
+PO-26-1082,V104,2026-08-24,USD,2,MKT-PHOTO-H,Photo Shoot (half-day),Shoot,2,1200.00
+PO-26-1082,V104,2026-08-24,USD,3,MKT-CAMP-D,Campaign Design Package,Pkg,1,3200.00
+PO-26-1083,V004,2026-08-31,INR,1,FAC-AC-SVC,AC Servicing (per unit),Nos,118,1150.00
+PO-26-1087,V002,2026-09-03,INR,1,IT-DOCK-C,USB-C Docking Station,Nos,4,7200.00
+PO-26-1087,V002,2026-09-03,INR,2,IT-KBM-W,Wireless Keyboard & Mouse Combo,Nos,32,1450.00
+PO-26-1091,V103,2026-09-11,USD,1,FRT-PAL-CD,"Pallet Freight, Chicago to Dallas",Pallet,2,385.00
+PO-26-1091,V103,2026-09-11,USD,2,FRT-EXP-PK,Expedited Parcel (per package),Pkg,2,62.50
+PO-26-1091,V103,2026-09-11,USD,3,FRT-CRATE,Custom Crating (per crate),Crate,1,140.00
+PO-26-1093,V005,2026-09-06,INR,1,PRT-BC-500,Business Cards (box of 500),Box,11,650.00
+PO-26-1093,V005,2026-09-06,INR,2,PRT-BAN-63,Flex Banner 6x3 ft,Nos,5,1350.00
+PO-26-1093,V005,2026-09-06,INR,3,PRT-BRO-1K,Brochures A4 Tri-fold (per 1000),Lot,1,6800.00
+PO-26-1094,V001,2026-09-15,INR,1,STN-A4-500,A4 Copier Paper 75 GSM (500 sheets),Ream,26,285.00
+PO-26-1094,V001,2026-09-15,INR,2,STN-TNR-12A,Toner Cartridge 12A Compatible,Nos,4,2850.00
+PO-26-1095,V005,2026-09-05,INR,1,PRT-FLY-1K,Flyers A5 (per 1000),Lot,10,2400.00
+PO-26-1095,V005,2026-09-05,INR,2,PRT-BRO-1K,Brochures A4 Tri-fold (per 1000),Lot,9,6800.00
+PO-26-1095,V005,2026-09-05,INR,3,PRT-BAN-63,Flex Banner 6x3 ft,Nos,44,1350.00
+PO-26-1097,V004,2026-09-06,INR,1,FAC-PEST-Q,Pest Control Service (quarterly),Visit,38,9500.00
+PO-26-1099,V102,2026-09-05,USD,1,SW-API-1M,API Credit Pack (1M calls),Pack,24,250.00
+PO-26-1099,V102,2026-09-05,USD,2,SW-ONB-DAY,Onboarding Workshop (per day),Day,3,1500.00
+PO-26-1099,V102,2026-09-05,USD,3,SW-SUP-PRM,Premium Support Plan (annual),Plan,1,2400.00
+PO-26-1104,V004,2026-10-05,INR,1,FAC-PEST-Q,Pest Control Service (quarterly),Visit,1,9500.00
+PO-26-1104,V004,2026-10-05,INR,2,FAC-SEC-MO,Security Guard (per guard-month),Month,1,28500.00
+PO-26-1104,V004,2026-10-05,INR,3,FAC-AC-SVC,AC Servicing (per unit),Nos,1,1150.00
+PO-26-1106,V006,2026-09-13,INR,1,CAT-TEA,Tea / Coffee & Snacks (per head),Head,18,95.00
+PO-26-1106,V006,2026-09-13,INR,2,CAT-EVT-50,Event Catering Package (50 pax),Pkg,1,21500.00
+PO-26-1106,V006,2026-09-13,INR,3,CAT-LUNCH,Working Lunch (per head),Head,6,280.00
+PO-26-1110,V002,2026-09-22,INR,1,IT-DOCK-C,USB-C Docking Station,Nos,48,7200.00
+PO-26-1110,V002,2026-09-22,INR,2,IT-AMC-DEV,Annual Maintenance Contract (per device),Nos,82,2400.00
+PO-26-1110,V002,2026-09-22,INR,3,IT-LAP-14,"14in Business Laptop, i5 / 16GB / 512GB",Nos,5,58500.00
+PO-26-1114,V103,2026-09-13,USD,1,FRT-INS-SH,Cargo Insurance (per shipment),Shipment,6,45.00
+PO-26-1114,V103,2026-09-13,USD,2,FRT-PAL-CD,"Pallet Freight, Chicago to Dallas",Pallet,1,385.00
+PO-26-1114,V103,2026-09-13,USD,3,FRT-EXP-PK,Expedited Parcel (per package),Pkg,2,62.50
+PO-26-1116,V005,2026-09-29,INR,1,PRT-BRO-1K,Brochures A4 Tri-fold (per 1000),Lot,1,6800.00
+PO-26-1116,V005,2026-09-29,INR,2,PRT-FLY-1K,Flyers A5 (per 1000),Lot,1,2400.00
+PO-26-1116,V005,2026-09-29,INR,3,PRT-BC-500,Business Cards (box of 500),Box,4,650.00
+PO-26-1119,V004,2026-10-07,INR,1,FAC-HK-MO,Housekeeping Services (per month),Month,1,42000.00
+PO-26-1119,V004,2026-10-07,INR,2,FAC-PEST-Q,Pest Control Service (quarterly),Visit,1,9500.00
+PO-26-1121,V006,2026-10-07,INR,1,CAT-TEA,Tea / Coffee & Snacks (per head),Head,65,95.00

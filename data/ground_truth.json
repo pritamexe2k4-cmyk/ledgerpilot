@@ -1,0 +1,2299 @@
+{
+  "meta": {
+    "description": "SAMPLE synthetic data for LedgerPilot. All entities are fictional.",
+    "seed": 42,
+    "invoice_count": 40,
+    "approved": 32,
+    "exceptions": 8,
+    "exception_counts": {
+      "total_mismatch": 2,
+      "unknown_vendor": 1,
+      "wrong_tax": 1,
+      "price_mismatch": 2,
+      "duplicate_invoice": 1,
+      "missing_po": 1
+    },
+    "approval_tier_counts": {
+      "manager": 15,
+      "auto": 11,
+      "director": 6
+    },
+    "templates": [
+      "classic",
+      "compact",
+      "minimal",
+      "modern"
+    ],
+    "policy_check_order": [
+      "unknown_vendor",
+      "duplicate_invoice",
+      "missing_po",
+      "total_mismatch",
+      "wrong_tax",
+      "price_mismatch"
+    ]
+  },
+  "invoices": {
+    "inv_001.pdf": {
+      "file": "inv_001.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Lone Star Office Furniture LLC",
+        "vendor_tax_id": "91-7120868",
+        "invoice_number": "LSOF-00076",
+        "invoice_date": "2026-09-01",
+        "due_date": "2026-10-01",
+        "currency": "USD",
+        "po_number": "PO-26-1006",
+        "line_items": [
+          {
+            "sku": "FUR-LAMP-L",
+            "description": "LED Desk Lamp",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 15,
+            "unit_price": 34.5,
+            "amount": 517.5
+          },
+          {
+            "sku": "FUR-CAB-4D",
+            "description": "4-Drawer File Cabinet",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 4,
+            "unit_price": 189.0,
+            "amount": 756.0
+          },
+          {
+            "sku": "FUR-DESK-60",
+            "description": "Height-Adjustable Desk 60in",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 489.0,
+            "amount": 489.0
+          },
+          {
+            "sku": "FUR-CHAIR-E",
+            "description": "Ergonomic Task Chair",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 245.0,
+            "amount": 490.0
+          }
+        ],
+        "subtotal": 2252.5,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 185.83
+          }
+        ],
+        "tax_total": 185.83,
+        "total": 2438.33
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_002.pdf": {
+      "file": "inv_002.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Hudson Creative Agency LLC",
+        "vendor_tax_id": "95-5479144",
+        "invoice_number": "HCA-0208",
+        "invoice_date": "2026-09-02",
+        "due_date": "2026-10-02",
+        "currency": "USD",
+        "po_number": "PO-26-1007",
+        "line_items": [
+          {
+            "sku": "MKT-VID-ED",
+            "description": "Product Video Edit (per video)",
+            "uom": "Video",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 950.0,
+            "amount": 950.0
+          },
+          {
+            "sku": "MKT-SOC-MO",
+            "description": "Social Media Management (per month)",
+            "uom": "Month",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1800.0,
+            "amount": 1800.0
+          },
+          {
+            "sku": "MKT-PHOTO-H",
+            "description": "Photo Shoot (half-day)",
+            "uom": "Shoot",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1200.0,
+            "amount": 1200.0
+          },
+          {
+            "sku": "MKT-CAMP-D",
+            "description": "Campaign Design Package",
+            "uom": "Pkg",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 3200.0,
+            "amount": 3200.0
+          }
+        ],
+        "subtotal": 7150.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.875%)",
+            "rate": 8.875,
+            "amount": 634.56
+          }
+        ],
+        "tax_total": 634.56,
+        "total": 7784.56
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_003.pdf": {
+      "file": "inv_003.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Charminar Catering Co.",
+        "vendor_tax_id": "36GCBHK1316J1ZE",
+        "invoice_number": "CC/181",
+        "invoice_date": "2026-09-04",
+        "due_date": "2026-09-19",
+        "currency": "INR",
+        "po_number": "PO-26-1009",
+        "line_items": [
+          {
+            "sku": "CAT-LUNCH",
+            "description": "Working Lunch (per head)",
+            "uom": "Head",
+            "hsn_sac": "996331",
+            "quantity": 200,
+            "unit_price": 280.0,
+            "amount": 56000.0
+          }
+        ],
+        "subtotal": 56000.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 1400.0
+          },
+          {
+            "name": "SGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 1400.0
+          }
+        ],
+        "tax_total": 2800.0,
+        "total": 58800.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_004.pdf": {
+      "file": "inv_004.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Hudson Creative Agency LLC",
+        "vendor_tax_id": "95-5479144",
+        "invoice_number": "HCA-0212",
+        "invoice_date": "2026-09-05",
+        "due_date": "2026-10-05",
+        "currency": "USD",
+        "po_number": "PO-26-1015",
+        "line_items": [
+          {
+            "sku": "MKT-SOC-MO",
+            "description": "Social Media Management (per month)",
+            "uom": "Month",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1800.0,
+            "amount": 1800.0
+          },
+          {
+            "sku": "MKT-VID-ED",
+            "description": "Product Video Edit (per video)",
+            "uom": "Video",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 950.0,
+            "amount": 950.0
+          },
+          {
+            "sku": "MKT-PHOTO-H",
+            "description": "Photo Shoot (half-day)",
+            "uom": "Shoot",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1200.0,
+            "amount": 1200.0
+          }
+        ],
+        "subtotal": 3950.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.875%)",
+            "rate": 8.875,
+            "amount": 350.56
+          }
+        ],
+        "tax_total": 350.56,
+        "total": 4300.56
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_005.pdf": {
+      "file": "inv_005.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Pacific Cloud Software Inc.",
+        "vendor_tax_id": "30-7210606",
+        "invoice_number": "PCS-INV-000155",
+        "invoice_date": "2026-09-06",
+        "due_date": "2026-10-21",
+        "currency": "USD",
+        "po_number": "PO-26-1017",
+        "line_items": [
+          {
+            "sku": "SW-SEAT-AN",
+            "description": "Analytics Platform Seat License (annual)",
+            "uom": "Seat",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 420.0,
+            "amount": 420.0
+          },
+          {
+            "sku": "SW-ONB-DAY",
+            "description": "Onboarding Workshop (per day)",
+            "uom": "Day",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1500.0,
+            "amount": 1500.0
+          },
+          {
+            "sku": "SW-API-1M",
+            "description": "API Credit Pack (1M calls)",
+            "uom": "Pack",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 250.0,
+            "amount": 250.0
+          }
+        ],
+        "subtotal": 2170.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (7.25%)",
+            "rate": 7.25,
+            "amount": 157.33
+          }
+        ],
+        "tax_total": 157.33,
+        "total": 2327.33
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_006.pdf": {
+      "file": "inv_006.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Hudson Creative Agency LLC",
+        "vendor_tax_id": "95-5479144",
+        "invoice_number": "HCA-0215",
+        "invoice_date": "2026-09-06",
+        "due_date": "2026-10-06",
+        "currency": "USD",
+        "po_number": "PO-26-1022",
+        "line_items": [
+          {
+            "sku": "MKT-SOC-MO",
+            "description": "Social Media Management (per month)",
+            "uom": "Month",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1800.0,
+            "amount": 1800.0
+          },
+          {
+            "sku": "MKT-PHOTO-H",
+            "description": "Photo Shoot (half-day)",
+            "uom": "Shoot",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1200.0,
+            "amount": 1200.0
+          },
+          {
+            "sku": "MKT-VID-ED",
+            "description": "Product Video Edit (per video)",
+            "uom": "Video",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 950.0,
+            "amount": 950.0
+          }
+        ],
+        "subtotal": 3950.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.875%)",
+            "rate": 8.875,
+            "amount": 350.56
+          }
+        ],
+        "tax_total": 350.56,
+        "total": 4300.56
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_007.pdf": {
+      "file": "inv_007.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Nova Print & Packaging",
+        "vendor_tax_id": "27BRUDN1849M1ZJ",
+        "invoice_number": "NP-0247",
+        "invoice_date": "2026-09-07",
+        "due_date": "2026-10-07",
+        "currency": "INR",
+        "po_number": "PO-26-1023",
+        "line_items": [
+          {
+            "sku": "PRT-BC-500",
+            "description": "Business Cards (box of 500)",
+            "uom": "Box",
+            "hsn_sac": "4911",
+            "quantity": 30,
+            "unit_price": 650.0,
+            "amount": 19500.0
+          },
+          {
+            "sku": "PRT-FLY-1K",
+            "description": "Flyers A5 (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 10,
+            "unit_price": 2400.0,
+            "amount": 24000.0
+          }
+        ],
+        "subtotal": 43500.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 12%",
+            "rate": 12.0,
+            "amount": 5220.0
+          }
+        ],
+        "tax_total": 5220.0,
+        "total": 48720.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_008.pdf": {
+      "file": "inv_008.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Deccan Logistics Pvt Ltd",
+        "vendor_tax_id": "36UPHRV4026L1Z8",
+        "invoice_number": "DL/00063",
+        "invoice_date": "2026-09-08",
+        "due_date": "2026-09-23",
+        "currency": "INR",
+        "po_number": "PO-26-1028",
+        "line_items": [
+          {
+            "sku": "LOG-PACK-K",
+            "description": "Packing Material Kit",
+            "uom": "Kit",
+            "hsn_sac": "3923",
+            "quantity": 76,
+            "unit_price": 380.0,
+            "amount": 28880.0
+          },
+          {
+            "sku": "LOG-LTL",
+            "description": "Intercity LTL Freight (per consignment)",
+            "uom": "Nos",
+            "hsn_sac": "996511",
+            "quantity": 2,
+            "unit_price": 14500.0,
+            "amount": 29000.0
+          }
+        ],
+        "subtotal": 57880.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 6%",
+            "rate": 6.0,
+            "amount": 3472.8
+          },
+          {
+            "name": "SGST @ 6%",
+            "rate": 6.0,
+            "amount": 3472.8
+          }
+        ],
+        "tax_total": 6945.6,
+        "total": 64825.6
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_009.pdf": {
+      "file": "inv_009.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Lone Star Office Furniture LLC",
+        "vendor_tax_id": "91-7120868",
+        "invoice_number": "LSOF-00079",
+        "invoice_date": "2026-09-10",
+        "due_date": "2026-10-10",
+        "currency": "USD",
+        "po_number": "PO-26-1034",
+        "line_items": [
+          {
+            "sku": "FUR-CAB-4D",
+            "description": "4-Drawer File Cabinet",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 60,
+            "unit_price": 190.89,
+            "amount": 11453.4
+          },
+          {
+            "sku": "FUR-DESK-60",
+            "description": "Height-Adjustable Desk 60in",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 22,
+            "unit_price": 489.0,
+            "amount": 10758.0
+          }
+        ],
+        "subtotal": 22211.4,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 1832.44
+          }
+        ],
+        "tax_total": 1832.44,
+        "total": 24043.84
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": [
+          "FUR-CAB-4D billed at +1.0% vs PO (within 2.0% tolerance)."
+        ]
+      }
+    },
+    "inv_010.pdf": {
+      "file": "inv_010.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Midwest Freight Systems Inc.",
+        "vendor_tax_id": "55-4514944",
+        "invoice_number": "MFS0000338",
+        "invoice_date": "2026-09-11",
+        "due_date": "2026-10-11",
+        "currency": "USD",
+        "po_number": "PO-26-1038",
+        "line_items": [
+          {
+            "sku": "FRT-EXP-PK",
+            "description": "Expedited Parcel (per package)",
+            "uom": "Pkg",
+            "hsn_sac": null,
+            "quantity": 33,
+            "unit_price": 62.5,
+            "amount": 2062.5
+          },
+          {
+            "sku": "FRT-PAL-CD",
+            "description": "Pallet Freight, Chicago to Dallas",
+            "uom": "Pallet",
+            "hsn_sac": null,
+            "quantity": 5,
+            "unit_price": 385.0,
+            "amount": 1925.0
+          },
+          {
+            "sku": "FRT-CRATE",
+            "description": "Custom Crating (per crate)",
+            "uom": "Crate",
+            "hsn_sac": null,
+            "quantity": 36,
+            "unit_price": 140.0,
+            "amount": 5040.0
+          }
+        ],
+        "subtotal": 9027.5,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (6.25%)",
+            "rate": 6.25,
+            "amount": 564.22
+          }
+        ],
+        "tax_total": 564.22,
+        "total": 9591.72
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_011.pdf": {
+      "file": "inv_011.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Pacific Cloud Software Inc.",
+        "vendor_tax_id": "30-7210606",
+        "invoice_number": "PCS-INV-000156",
+        "invoice_date": "2026-09-12",
+        "due_date": "2026-10-27",
+        "currency": "USD",
+        "po_number": "PO-26-1042",
+        "line_items": [
+          {
+            "sku": "SW-SEAT-AN",
+            "description": "Analytics Platform Seat License (annual)",
+            "uom": "Seat",
+            "hsn_sac": null,
+            "quantity": 10,
+            "unit_price": 420.0,
+            "amount": 4200.0
+          },
+          {
+            "sku": "SW-SUP-PRM",
+            "description": "Premium Support Plan (annual)",
+            "uom": "Plan",
+            "hsn_sac": null,
+            "quantity": 3,
+            "unit_price": 2400.0,
+            "amount": 7200.0
+          },
+          {
+            "sku": "SW-ONB-DAY",
+            "description": "Onboarding Workshop (per day)",
+            "uom": "Day",
+            "hsn_sac": null,
+            "quantity": 3,
+            "unit_price": 1500.0,
+            "amount": 4500.0
+          }
+        ],
+        "subtotal": 15900.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (7.25%)",
+            "rate": 7.25,
+            "amount": 1152.75
+          }
+        ],
+        "tax_total": 1152.75,
+        "total": 17052.75
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": []
+      }
+    },
+    "inv_012.pdf": {
+      "file": "inv_012.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Midwest Freight Systems Inc.",
+        "vendor_tax_id": "55-4514944",
+        "invoice_number": "MFS0000346",
+        "invoice_date": "2026-09-13",
+        "due_date": "2026-10-13",
+        "currency": "USD",
+        "po_number": "PO-26-1043",
+        "line_items": [
+          {
+            "sku": "FRT-PAL-CD",
+            "description": "Pallet Freight, Chicago to Dallas",
+            "uom": "Pallet",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 385.0,
+            "amount": 770.0
+          },
+          {
+            "sku": "FRT-INS-SH",
+            "description": "Cargo Insurance (per shipment)",
+            "uom": "Shipment",
+            "hsn_sac": null,
+            "quantity": 21,
+            "unit_price": 45.0,
+            "amount": 945.0
+          }
+        ],
+        "subtotal": 1715.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (6.25%)",
+            "rate": 6.25,
+            "amount": 107.19
+          }
+        ],
+        "tax_total": 107.19,
+        "total": 1822.19
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_013.pdf": {
+      "file": "inv_013.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Bharat IT Solutions Pvt Ltd",
+        "vendor_tax_id": "29BACGH8908G1ZN",
+        "invoice_number": "BIT-2026-0160",
+        "invoice_date": "2026-09-16",
+        "due_date": "2026-10-31",
+        "currency": "INR",
+        "po_number": "PO-26-1049",
+        "line_items": [
+          {
+            "sku": "IT-LAP-14",
+            "description": "14in Business Laptop, i5 / 16GB / 512GB",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 1,
+            "unit_price": 58500.0,
+            "amount": 58500.0
+          },
+          {
+            "sku": "IT-MON-24",
+            "description": "24in IPS Monitor",
+            "uom": "Nos",
+            "hsn_sac": "8528",
+            "quantity": 2,
+            "unit_price": 9800.0,
+            "amount": 19600.0
+          }
+        ],
+        "subtotal": 78100.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 14058.0
+          }
+        ],
+        "tax_total": 14058.0,
+        "total": 100462.14
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "total_mismatch",
+        "reason": "Stated total 100462.14 differs from subtotal + tax 92158.00 by 8304.14.",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_014.pdf": {
+      "file": "inv_014.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Bharat IT Solutions Pvt Ltd",
+        "vendor_tax_id": "29BACGH8908G1ZN",
+        "invoice_number": "BIT-2026-0162",
+        "invoice_date": "2026-09-16",
+        "due_date": "2026-10-31",
+        "currency": "INR",
+        "po_number": "PO-26-1052",
+        "line_items": [
+          {
+            "sku": "IT-KBM-W",
+            "description": "Wireless Keyboard & Mouse Combo",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 200,
+            "unit_price": 1450.0,
+            "amount": 290000.0
+          },
+          {
+            "sku": "IT-LAP-14",
+            "description": "14in Business Laptop, i5 / 16GB / 512GB",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 3,
+            "unit_price": 58500.0,
+            "amount": 175500.0
+          }
+        ],
+        "subtotal": 465500.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 83790.0
+          }
+        ],
+        "tax_total": 83790.0,
+        "total": 549290.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": []
+      }
+    },
+    "inv_015.pdf": {
+      "file": "inv_015.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Sri Lakshmi Office Supplies",
+        "vendor_tax_id": "36DAJHH2181V1ZD",
+        "invoice_number": "SLO/26-27/0072",
+        "invoice_date": "2026-09-20",
+        "due_date": "2026-10-20",
+        "currency": "INR",
+        "po_number": "PO-26-1058",
+        "line_items": [
+          {
+            "sku": "STN-FILE-FS",
+            "description": "Box File, Foolscap",
+            "uom": "Nos",
+            "hsn_sac": "4820",
+            "quantity": 16,
+            "unit_price": 95.0,
+            "amount": 1520.0
+          },
+          {
+            "sku": "STN-STPL-HD",
+            "description": "Heavy Duty Stapler",
+            "uom": "Nos",
+            "hsn_sac": "8472",
+            "quantity": 2,
+            "unit_price": 650.0,
+            "amount": 1300.0
+          },
+          {
+            "sku": "STN-PEN-50",
+            "description": "Gel Pens, Blue (box of 50)",
+            "uom": "Box",
+            "hsn_sac": "9608",
+            "quantity": 2,
+            "unit_price": 420.0,
+            "amount": 840.0
+          },
+          {
+            "sku": "STN-A4-500",
+            "description": "A4 Copier Paper 75 GSM (500 sheets)",
+            "uom": "Ream",
+            "hsn_sac": "4802",
+            "quantity": 7,
+            "unit_price": 285.0,
+            "amount": 1995.0
+          }
+        ],
+        "subtotal": 5655.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 9%",
+            "rate": 9.0,
+            "amount": 508.95
+          },
+          {
+            "name": "SGST @ 9%",
+            "rate": 9.0,
+            "amount": 508.95
+          }
+        ],
+        "tax_total": 1017.9,
+        "total": 6672.9
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_016.pdf": {
+      "file": "inv_016.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Sri Lakshmi Office Supplies",
+        "vendor_tax_id": "36DAJHH2181V1ZD",
+        "invoice_number": "SLO/26-27/0081",
+        "invoice_date": "2026-09-20",
+        "due_date": "2026-10-20",
+        "currency": "INR",
+        "po_number": "PO-26-1063",
+        "line_items": [
+          {
+            "sku": "STN-STPL-HD",
+            "description": "Heavy Duty Stapler",
+            "uom": "Nos",
+            "hsn_sac": "8472",
+            "quantity": 200,
+            "unit_price": 650.0,
+            "amount": 130000.0
+          },
+          {
+            "sku": "STN-A4-500",
+            "description": "A4 Copier Paper 75 GSM (500 sheets)",
+            "uom": "Ream",
+            "hsn_sac": "4802",
+            "quantity": 200,
+            "unit_price": 285.0,
+            "amount": 57000.0
+          },
+          {
+            "sku": "STN-TNR-12A",
+            "description": "Toner Cartridge 12A Compatible",
+            "uom": "Nos",
+            "hsn_sac": "8443",
+            "quantity": 31,
+            "unit_price": 2850.0,
+            "amount": 88350.0
+          },
+          {
+            "sku": "STN-FILE-FS",
+            "description": "Box File, Foolscap",
+            "uom": "Nos",
+            "hsn_sac": "4820",
+            "quantity": 200,
+            "unit_price": 95.0,
+            "amount": 19000.0
+          }
+        ],
+        "subtotal": 294350.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 9%",
+            "rate": 9.0,
+            "amount": 26491.5
+          },
+          {
+            "name": "SGST @ 9%",
+            "rate": 9.0,
+            "amount": 26491.5
+          }
+        ],
+        "tax_total": 52983.0,
+        "total": 347333.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_017.pdf": {
+      "file": "inv_017.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Charminar Catering Co.",
+        "vendor_tax_id": "36GCBHK1316J1ZE",
+        "invoice_number": "CC/182",
+        "invoice_date": "2026-09-21",
+        "due_date": "2026-10-06",
+        "currency": "INR",
+        "po_number": "PO-26-1064",
+        "line_items": [
+          {
+            "sku": "CAT-EVT-50",
+            "description": "Event Catering Package (50 pax)",
+            "uom": "Pkg",
+            "hsn_sac": "996331",
+            "quantity": 9,
+            "unit_price": 21500.0,
+            "amount": 193500.0
+          },
+          {
+            "sku": "CAT-LUNCH",
+            "description": "Working Lunch (per head)",
+            "uom": "Head",
+            "hsn_sac": "996331",
+            "quantity": 200,
+            "unit_price": 280.0,
+            "amount": 56000.0
+          }
+        ],
+        "subtotal": 249500.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 6237.5
+          },
+          {
+            "name": "SGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 6237.5
+          }
+        ],
+        "tax_total": 12475.0,
+        "total": 292795.14
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "total_mismatch",
+        "reason": "Stated total 292795.14 differs from subtotal + tax 261975.00 by 30820.14.",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_018.pdf": {
+      "file": "inv_018.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Lone Star Office Furniture LLC",
+        "vendor_tax_id": "91-7120868",
+        "invoice_number": "LSOF-00083",
+        "invoice_date": "2026-09-24",
+        "due_date": "2026-10-24",
+        "currency": "USD",
+        "po_number": "PO-26-1068",
+        "line_items": [
+          {
+            "sku": "FUR-CHAIR-E",
+            "description": "Ergonomic Task Chair",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 245.0,
+            "amount": 245.0
+          },
+          {
+            "sku": "FUR-LAMP-L",
+            "description": "LED Desk Lamp",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 34.5,
+            "amount": 34.5
+          }
+        ],
+        "subtotal": 279.5,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 23.06
+          }
+        ],
+        "tax_total": 23.06,
+        "total": 302.56
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_019.pdf": {
+      "file": "inv_019.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Lone Star Office Furniture LLC",
+        "vendor_tax_id": "91-7120868",
+        "invoice_number": "LSOF-00088",
+        "invoice_date": "2026-09-24",
+        "due_date": "2026-10-24",
+        "currency": "USD",
+        "po_number": "PO-26-1072",
+        "line_items": [
+          {
+            "sku": "FUR-DESK-60",
+            "description": "Height-Adjustable Desk 60in",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 17,
+            "unit_price": 489.0,
+            "amount": 8313.0
+          },
+          {
+            "sku": "FUR-CHAIR-E",
+            "description": "Ergonomic Task Chair",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 18,
+            "unit_price": 245.0,
+            "amount": 4410.0
+          }
+        ],
+        "subtotal": 12723.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 1049.65
+          }
+        ],
+        "tax_total": 1049.65,
+        "total": 13772.65
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": []
+      }
+    },
+    "inv_020.pdf": {
+      "file": "inv_020.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Sri Lakshmi Office Supplies",
+        "vendor_tax_id": "36DAJHH2181V1ZD",
+        "invoice_number": "SLO/26-27/0085",
+        "invoice_date": "2026-10-02",
+        "due_date": "2026-11-01",
+        "currency": "INR",
+        "po_number": "PO-26-1073",
+        "line_items": [
+          {
+            "sku": "STN-PEN-50",
+            "description": "Gel Pens, Blue (box of 50)",
+            "uom": "Box",
+            "hsn_sac": "9608",
+            "quantity": 64,
+            "unit_price": 420.0,
+            "amount": 26880.0
+          }
+        ],
+        "subtotal": 26880.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 9%",
+            "rate": 9.0,
+            "amount": 2419.2
+          },
+          {
+            "name": "SGST @ 9%",
+            "rate": 9.0,
+            "amount": 2419.2
+          }
+        ],
+        "tax_total": 4838.4,
+        "total": 31718.4
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_021.pdf": {
+      "file": "inv_021.pdf",
+      "template": "compact",
+      "vendor_in_master": false,
+      "extracted": {
+        "vendor_name": "QuickSupply Partners LLC",
+        "vendor_tax_id": "97-6440561",
+        "invoice_number": "QSP000384",
+        "invoice_date": "2026-10-02",
+        "due_date": "2026-11-01",
+        "currency": "USD",
+        "po_number": "PO-26-7985",
+        "line_items": [
+          {
+            "sku": "QS-EQP-02",
+            "description": "Equipment Rental (per week)",
+            "uom": "Week",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 310.0,
+            "amount": 310.0
+          },
+          {
+            "sku": "QS-BULK-01",
+            "description": "Bulk Office Consumables Lot",
+            "uom": "Lot",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 640.0,
+            "amount": 640.0
+          }
+        ],
+        "subtotal": 950.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 78.38
+          }
+        ],
+        "tax_total": 78.38,
+        "total": 1028.38
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "unknown_vendor",
+        "reason": "Vendor 'QuickSupply Partners LLC' (97-6440561) is not in the approved vendor master; referenced PO PO-26-7985 does not exist.",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_022.pdf": {
+      "file": "inv_022.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Deccan Logistics Pvt Ltd",
+        "vendor_tax_id": "36UPHRV4026L1Z8",
+        "invoice_number": "DL/00068",
+        "invoice_date": "2026-10-03",
+        "due_date": "2026-10-18",
+        "currency": "INR",
+        "po_number": "PO-26-1076",
+        "line_items": [
+          {
+            "sku": "LOG-LOCAL",
+            "description": "Local Courier Run (per trip)",
+            "uom": "Trip",
+            "hsn_sac": "996812",
+            "quantity": 48,
+            "unit_price": 1800.0,
+            "amount": 86400.0
+          }
+        ],
+        "subtotal": 86400.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 6%",
+            "rate": 6.0,
+            "amount": 5184.0
+          },
+          {
+            "name": "SGST @ 6%",
+            "rate": 6.0,
+            "amount": 5184.0
+          }
+        ],
+        "tax_total": 10368.0,
+        "total": 96768.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_023.pdf": {
+      "file": "inv_023.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Hudson Creative Agency LLC",
+        "vendor_tax_id": "95-5479144",
+        "invoice_number": "HCA-0222",
+        "invoice_date": "2026-10-03",
+        "due_date": "2026-11-02",
+        "currency": "USD",
+        "po_number": "PO-26-1082",
+        "line_items": [
+          {
+            "sku": "MKT-SOC-MO",
+            "description": "Social Media Management (per month)",
+            "uom": "Month",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 1800.0,
+            "amount": 1800.0
+          },
+          {
+            "sku": "MKT-PHOTO-H",
+            "description": "Photo Shoot (half-day)",
+            "uom": "Shoot",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 1200.0,
+            "amount": 2400.0
+          },
+          {
+            "sku": "MKT-CAMP-D",
+            "description": "Campaign Design Package",
+            "uom": "Pkg",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 3200.0,
+            "amount": 3200.0
+          }
+        ],
+        "subtotal": 7400.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (6.25%)",
+            "rate": 6.25,
+            "amount": 462.5
+          }
+        ],
+        "tax_total": 462.5,
+        "total": 7862.5
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "wrong_tax",
+        "reason": "Tax charged at 6.25% (462.50) but Hudson Creative Agency LLC category rate is 8.875% (expected tax 656.75).",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_024.pdf": {
+      "file": "inv_024.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Kaveri Facility Services LLP",
+        "vendor_tax_id": "33EGLDC6155W1Z8",
+        "invoice_number": "KFS000208",
+        "invoice_date": "2026-10-03",
+        "due_date": "2026-11-02",
+        "currency": "INR",
+        "po_number": "PO-26-1083",
+        "line_items": [
+          {
+            "sku": "FAC-AC-SVC",
+            "description": "AC Servicing (per unit)",
+            "uom": "Nos",
+            "hsn_sac": "998719",
+            "quantity": 118,
+            "unit_price": 1150.0,
+            "amount": 135700.0
+          }
+        ],
+        "subtotal": 135700.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 24426.0
+          }
+        ],
+        "tax_total": 24426.0,
+        "total": 160126.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_025.pdf": {
+      "file": "inv_025.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Bharat IT Solutions Pvt Ltd",
+        "vendor_tax_id": "29BACGH8908G1ZN",
+        "invoice_number": "BIT-2026-0169",
+        "invoice_date": "2026-10-04",
+        "due_date": "2026-11-18",
+        "currency": "INR",
+        "po_number": "PO-26-1087",
+        "line_items": [
+          {
+            "sku": "IT-DOCK-C",
+            "description": "USB-C Docking Station",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 4,
+            "unit_price": 7200.0,
+            "amount": 28800.0
+          },
+          {
+            "sku": "IT-KBM-W",
+            "description": "Wireless Keyboard & Mouse Combo",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 32,
+            "unit_price": 1450.0,
+            "amount": 46400.0
+          }
+        ],
+        "subtotal": 75200.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 13536.0
+          }
+        ],
+        "tax_total": 13536.0,
+        "total": 88736.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_026.pdf": {
+      "file": "inv_026.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Midwest Freight Systems Inc.",
+        "vendor_tax_id": "55-4514944",
+        "invoice_number": "MFS0000351",
+        "invoice_date": "2026-10-05",
+        "due_date": "2026-11-04",
+        "currency": "USD",
+        "po_number": "PO-26-1091",
+        "line_items": [
+          {
+            "sku": "FRT-PAL-CD",
+            "description": "Pallet Freight, Chicago to Dallas",
+            "uom": "Pallet",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 385.0,
+            "amount": 385.0
+          },
+          {
+            "sku": "FRT-EXP-PK",
+            "description": "Expedited Parcel (per package)",
+            "uom": "Pkg",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 62.5,
+            "amount": 125.0
+          },
+          {
+            "sku": "FRT-CRATE",
+            "description": "Custom Crating (per crate)",
+            "uom": "Crate",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 140.0,
+            "amount": 140.0
+          }
+        ],
+        "subtotal": 650.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (6.25%)",
+            "rate": 6.25,
+            "amount": 40.63
+          }
+        ],
+        "tax_total": 40.63,
+        "total": 690.63
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": [
+          "FRT-PAL-CD: partial delivery, invoiced 1 of 2 ordered; GRN covers invoiced quantity."
+        ]
+      }
+    },
+    "inv_027.pdf": {
+      "file": "inv_027.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Nova Print & Packaging",
+        "vendor_tax_id": "27BRUDN1849M1ZJ",
+        "invoice_number": "NP-0256",
+        "invoice_date": "2026-10-07",
+        "due_date": "2026-11-06",
+        "currency": "INR",
+        "po_number": "PO-26-1093",
+        "line_items": [
+          {
+            "sku": "PRT-BC-500",
+            "description": "Business Cards (box of 500)",
+            "uom": "Box",
+            "hsn_sac": "4911",
+            "quantity": 11,
+            "unit_price": 650.0,
+            "amount": 7150.0
+          },
+          {
+            "sku": "PRT-BAN-63",
+            "description": "Flex Banner 6x3 ft",
+            "uom": "Nos",
+            "hsn_sac": "3921",
+            "quantity": 5,
+            "unit_price": 1350.0,
+            "amount": 6750.0
+          },
+          {
+            "sku": "PRT-BRO-1K",
+            "description": "Brochures A4 Tri-fold (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 1,
+            "unit_price": 6800.0,
+            "amount": 6800.0
+          }
+        ],
+        "subtotal": 20700.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 12%",
+            "rate": 12.0,
+            "amount": 2484.0
+          }
+        ],
+        "tax_total": 2484.0,
+        "total": 23184.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_028.pdf": {
+      "file": "inv_028.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Sri Lakshmi Office Supplies",
+        "vendor_tax_id": "36DAJHH2181V1ZD",
+        "invoice_number": "SLO/26-27/0089",
+        "invoice_date": "2026-10-09",
+        "due_date": "2026-11-08",
+        "currency": "INR",
+        "po_number": "PO-26-1094",
+        "line_items": [
+          {
+            "sku": "STN-A4-500",
+            "description": "A4 Copier Paper 75 GSM (500 sheets)",
+            "uom": "Ream",
+            "hsn_sac": "4802",
+            "quantity": 26,
+            "unit_price": 285.0,
+            "amount": 7410.0
+          },
+          {
+            "sku": "STN-TNR-12A",
+            "description": "Toner Cartridge 12A Compatible",
+            "uom": "Nos",
+            "hsn_sac": "8443",
+            "quantity": 4,
+            "unit_price": 2850.0,
+            "amount": 11400.0
+          }
+        ],
+        "subtotal": 18810.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 9%",
+            "rate": 9.0,
+            "amount": 1692.9
+          },
+          {
+            "name": "SGST @ 9%",
+            "rate": 9.0,
+            "amount": 1692.9
+          }
+        ],
+        "tax_total": 3385.8,
+        "total": 22195.8
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_029.pdf": {
+      "file": "inv_029.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Nova Print & Packaging",
+        "vendor_tax_id": "27BRUDN1849M1ZJ",
+        "invoice_number": "NP-0263",
+        "invoice_date": "2026-10-09",
+        "due_date": "2026-11-08",
+        "currency": "INR",
+        "po_number": "PO-26-1095",
+        "line_items": [
+          {
+            "sku": "PRT-FLY-1K",
+            "description": "Flyers A5 (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 10,
+            "unit_price": 2760.0,
+            "amount": 27600.0
+          },
+          {
+            "sku": "PRT-BRO-1K",
+            "description": "Brochures A4 Tri-fold (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 9,
+            "unit_price": 6800.0,
+            "amount": 61200.0
+          },
+          {
+            "sku": "PRT-BAN-63",
+            "description": "Flex Banner 6x3 ft",
+            "uom": "Nos",
+            "hsn_sac": "3921",
+            "quantity": 44,
+            "unit_price": 1350.0,
+            "amount": 59400.0
+          }
+        ],
+        "subtotal": 148200.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 12%",
+            "rate": 12.0,
+            "amount": 17784.0
+          }
+        ],
+        "tax_total": 17784.0,
+        "total": 165984.0
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "price_mismatch",
+        "reason": "Line PRT-FLY-1K unit price 2760.00 vs PO 2400.00 (+15%, tolerance 2.0%).",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_030.pdf": {
+      "file": "inv_030.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Kaveri Facility Services LLP",
+        "vendor_tax_id": "33EGLDC6155W1Z8",
+        "invoice_number": "KFS000216",
+        "invoice_date": "2026-10-11",
+        "due_date": "2026-11-10",
+        "currency": "INR",
+        "po_number": "PO-26-1097",
+        "line_items": [
+          {
+            "sku": "FAC-PEST-Q",
+            "description": "Pest Control Service (quarterly)",
+            "uom": "Visit",
+            "hsn_sac": "998531",
+            "quantity": 38,
+            "unit_price": 9500.0,
+            "amount": 361000.0
+          }
+        ],
+        "subtotal": 361000.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 64980.0
+          }
+        ],
+        "tax_total": 64980.0,
+        "total": 425980.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": []
+      }
+    },
+    "inv_031.pdf": {
+      "file": "inv_031.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Pacific Cloud Software Inc.",
+        "vendor_tax_id": "30-7210606",
+        "invoice_number": "PCS-INV-000164",
+        "invoice_date": "2026-10-11",
+        "due_date": "2026-11-25",
+        "currency": "USD",
+        "po_number": "PO-26-1099",
+        "line_items": [
+          {
+            "sku": "SW-API-1M",
+            "description": "API Credit Pack (1M calls)",
+            "uom": "Pack",
+            "hsn_sac": null,
+            "quantity": 24,
+            "unit_price": 250.0,
+            "amount": 6000.0
+          },
+          {
+            "sku": "SW-ONB-DAY",
+            "description": "Onboarding Workshop (per day)",
+            "uom": "Day",
+            "hsn_sac": null,
+            "quantity": 3,
+            "unit_price": 1500.0,
+            "amount": 4500.0
+          },
+          {
+            "sku": "SW-SUP-PRM",
+            "description": "Premium Support Plan (annual)",
+            "uom": "Plan",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 2400.0,
+            "amount": 2400.0
+          }
+        ],
+        "subtotal": 12900.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (7.25%)",
+            "rate": 7.25,
+            "amount": 935.25
+          }
+        ],
+        "tax_total": 935.25,
+        "total": 13835.25
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": []
+      }
+    },
+    "inv_032.pdf": {
+      "file": "inv_032.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Kaveri Facility Services LLP",
+        "vendor_tax_id": "33EGLDC6155W1Z8",
+        "invoice_number": "KFS000225",
+        "invoice_date": "2026-10-17",
+        "due_date": "2026-11-16",
+        "currency": "INR",
+        "po_number": "PO-26-1104",
+        "line_items": [
+          {
+            "sku": "FAC-PEST-Q",
+            "description": "Pest Control Service (quarterly)",
+            "uom": "Visit",
+            "hsn_sac": "998531",
+            "quantity": 1,
+            "unit_price": 9500.0,
+            "amount": 9500.0
+          },
+          {
+            "sku": "FAC-SEC-MO",
+            "description": "Security Guard (per guard-month)",
+            "uom": "Month",
+            "hsn_sac": "998525",
+            "quantity": 1,
+            "unit_price": 28500.0,
+            "amount": 28500.0
+          },
+          {
+            "sku": "FAC-AC-SVC",
+            "description": "AC Servicing (per unit)",
+            "uom": "Nos",
+            "hsn_sac": "998719",
+            "quantity": 1,
+            "unit_price": 1150.0,
+            "amount": 1150.0
+          }
+        ],
+        "subtotal": 39150.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 7047.0
+          }
+        ],
+        "tax_total": 7047.0,
+        "total": 46197.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_033.pdf": {
+      "file": "inv_033.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Charminar Catering Co.",
+        "vendor_tax_id": "36GCBHK1316J1ZE",
+        "invoice_number": "CC/186",
+        "invoice_date": "2026-10-19",
+        "due_date": "2026-11-03",
+        "currency": "INR",
+        "po_number": "PO-26-1106",
+        "line_items": [
+          {
+            "sku": "CAT-TEA",
+            "description": "Tea / Coffee & Snacks (per head)",
+            "uom": "Head",
+            "hsn_sac": "996331",
+            "quantity": 18,
+            "unit_price": 95.0,
+            "amount": 1710.0
+          },
+          {
+            "sku": "CAT-EVT-50",
+            "description": "Event Catering Package (50 pax)",
+            "uom": "Pkg",
+            "hsn_sac": "996331",
+            "quantity": 1,
+            "unit_price": 21500.0,
+            "amount": 21500.0
+          },
+          {
+            "sku": "CAT-LUNCH",
+            "description": "Working Lunch (per head)",
+            "uom": "Head",
+            "hsn_sac": "996331",
+            "quantity": 6,
+            "unit_price": 280.0,
+            "amount": 1680.0
+          }
+        ],
+        "subtotal": 24890.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 622.25
+          },
+          {
+            "name": "SGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 622.25
+          }
+        ],
+        "tax_total": 1244.5,
+        "total": 26134.5
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_034.pdf": {
+      "file": "inv_034.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Bharat IT Solutions Pvt Ltd",
+        "vendor_tax_id": "29BACGH8908G1ZN",
+        "invoice_number": "BIT-2026-0170",
+        "invoice_date": "2026-10-19",
+        "due_date": "2026-12-03",
+        "currency": "INR",
+        "po_number": "PO-26-1110",
+        "line_items": [
+          {
+            "sku": "IT-DOCK-C",
+            "description": "USB-C Docking Station",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 24,
+            "unit_price": 7200.0,
+            "amount": 172800.0
+          },
+          {
+            "sku": "IT-AMC-DEV",
+            "description": "Annual Maintenance Contract (per device)",
+            "uom": "Nos",
+            "hsn_sac": "998713",
+            "quantity": 82,
+            "unit_price": 2400.0,
+            "amount": 196800.0
+          },
+          {
+            "sku": "IT-LAP-14",
+            "description": "14in Business Laptop, i5 / 16GB / 512GB",
+            "uom": "Nos",
+            "hsn_sac": "8471",
+            "quantity": 5,
+            "unit_price": 58500.0,
+            "amount": 292500.0
+          }
+        ],
+        "subtotal": 662100.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 119178.0
+          }
+        ],
+        "tax_total": 119178.0,
+        "total": 781278.0
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "director",
+        "notes": [
+          "IT-DOCK-C: partial delivery, invoiced 24 of 48 ordered; GRN covers invoiced quantity."
+        ]
+      }
+    },
+    "inv_035.pdf": {
+      "file": "inv_035.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Lone Star Office Furniture LLC",
+        "vendor_tax_id": "91-7120868",
+        "invoice_number": "LSOF-00083",
+        "invoice_date": "2026-10-20",
+        "due_date": "2026-11-19",
+        "currency": "USD",
+        "po_number": "PO-26-1068",
+        "line_items": [
+          {
+            "sku": "FUR-CHAIR-E",
+            "description": "Ergonomic Task Chair",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 245.0,
+            "amount": 245.0
+          },
+          {
+            "sku": "FUR-LAMP-L",
+            "description": "LED Desk Lamp",
+            "uom": "Each",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 34.5,
+            "amount": 34.5
+          }
+        ],
+        "subtotal": 279.5,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (8.25%)",
+            "rate": 8.25,
+            "amount": 23.06
+          }
+        ],
+        "tax_total": 23.06,
+        "total": 302.56
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "duplicate_invoice",
+        "reason": "Invoice number LSOF-00083 from Lone Star Office Furniture LLC was already submitted as inv_018.pdf dated 2026-09-24.",
+        "approval_tier": null,
+        "notes": [],
+        "duplicate_of": "inv_018.pdf"
+      }
+    },
+    "inv_036.pdf": {
+      "file": "inv_036.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Midwest Freight Systems Inc.",
+        "vendor_tax_id": "55-4514944",
+        "invoice_number": "MFS0000356",
+        "invoice_date": "2026-10-22",
+        "due_date": "2026-11-21",
+        "currency": "USD",
+        "po_number": "PO-26-1114",
+        "line_items": [
+          {
+            "sku": "FRT-INS-SH",
+            "description": "Cargo Insurance (per shipment)",
+            "uom": "Shipment",
+            "hsn_sac": null,
+            "quantity": 6,
+            "unit_price": 45.0,
+            "amount": 270.0
+          },
+          {
+            "sku": "FRT-PAL-CD",
+            "description": "Pallet Freight, Chicago to Dallas",
+            "uom": "Pallet",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 385.0,
+            "amount": 385.0
+          },
+          {
+            "sku": "FRT-EXP-PK",
+            "description": "Expedited Parcel (per package)",
+            "uom": "Pkg",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 62.5,
+            "amount": 125.0
+          }
+        ],
+        "subtotal": 780.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (6.25%)",
+            "rate": 6.25,
+            "amount": 48.75
+          }
+        ],
+        "tax_total": 48.75,
+        "total": 828.75
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_037.pdf": {
+      "file": "inv_037.pdf",
+      "template": "classic",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Nova Print & Packaging",
+        "vendor_tax_id": "27BRUDN1849M1ZJ",
+        "invoice_number": "NP-0270",
+        "invoice_date": "2026-10-23",
+        "due_date": "2026-11-22",
+        "currency": "INR",
+        "po_number": "PO-26-1116",
+        "line_items": [
+          {
+            "sku": "PRT-BRO-1K",
+            "description": "Brochures A4 Tri-fold (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 1,
+            "unit_price": 6800.0,
+            "amount": 6800.0
+          },
+          {
+            "sku": "PRT-FLY-1K",
+            "description": "Flyers A5 (per 1000)",
+            "uom": "Lot",
+            "hsn_sac": "4911",
+            "quantity": 1,
+            "unit_price": 2640.0,
+            "amount": 2640.0
+          },
+          {
+            "sku": "PRT-BC-500",
+            "description": "Business Cards (box of 500)",
+            "uom": "Box",
+            "hsn_sac": "4911",
+            "quantity": 4,
+            "unit_price": 650.0,
+            "amount": 2600.0
+          }
+        ],
+        "subtotal": 12040.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 12%",
+            "rate": 12.0,
+            "amount": 1444.8
+          }
+        ],
+        "tax_total": 1444.8,
+        "total": 13484.8
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "price_mismatch",
+        "reason": "Line PRT-FLY-1K unit price 2640.00 vs PO 2400.00 (+10%, tolerance 2.0%).",
+        "approval_tier": null,
+        "notes": []
+      }
+    },
+    "inv_038.pdf": {
+      "file": "inv_038.pdf",
+      "template": "compact",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Kaveri Facility Services LLP",
+        "vendor_tax_id": "33EGLDC6155W1Z8",
+        "invoice_number": "KFS000232",
+        "invoice_date": "2026-10-24",
+        "due_date": "2026-11-23",
+        "currency": "INR",
+        "po_number": "PO-26-1119",
+        "line_items": [
+          {
+            "sku": "FAC-HK-MO",
+            "description": "Housekeeping Services (per month)",
+            "uom": "Month",
+            "hsn_sac": "998533",
+            "quantity": 1,
+            "unit_price": 42420.0,
+            "amount": 42420.0
+          },
+          {
+            "sku": "FAC-PEST-Q",
+            "description": "Pest Control Service (quarterly)",
+            "uom": "Visit",
+            "hsn_sac": "998531",
+            "quantity": 1,
+            "unit_price": 9500.0,
+            "amount": 9500.0
+          }
+        ],
+        "subtotal": 51920.0,
+        "tax_lines": [
+          {
+            "name": "IGST @ 18%",
+            "rate": 18.0,
+            "amount": 9345.6
+          }
+        ],
+        "tax_total": 9345.6,
+        "total": 61265.6
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "manager",
+        "notes": [
+          "FAC-HK-MO billed at +1.0% vs PO (within 2.0% tolerance)."
+        ]
+      }
+    },
+    "inv_039.pdf": {
+      "file": "inv_039.pdf",
+      "template": "minimal",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Charminar Catering Co.",
+        "vendor_tax_id": "36GCBHK1316J1ZE",
+        "invoice_number": "CC/187",
+        "invoice_date": "2026-10-24",
+        "due_date": "2026-11-08",
+        "currency": "INR",
+        "po_number": "PO-26-1121",
+        "line_items": [
+          {
+            "sku": "CAT-TEA",
+            "description": "Tea / Coffee & Snacks (per head)",
+            "uom": "Head",
+            "hsn_sac": "996331",
+            "quantity": 65,
+            "unit_price": 95.0,
+            "amount": 6175.0
+          }
+        ],
+        "subtotal": 6175.0,
+        "tax_lines": [
+          {
+            "name": "CGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 154.38
+          },
+          {
+            "name": "SGST @ 2.5%",
+            "rate": 2.5,
+            "amount": 154.38
+          }
+        ],
+        "tax_total": 308.76,
+        "total": 6483.76
+      },
+      "expected": {
+        "outcome": "approve",
+        "exception_type": null,
+        "reason": "All checks passed.",
+        "approval_tier": "auto",
+        "notes": []
+      }
+    },
+    "inv_040.pdf": {
+      "file": "inv_040.pdf",
+      "template": "modern",
+      "vendor_in_master": true,
+      "extracted": {
+        "vendor_name": "Pacific Cloud Software Inc.",
+        "vendor_tax_id": "30-7210606",
+        "invoice_number": "PCS-INV-000166",
+        "invoice_date": "2026-10-26",
+        "due_date": "2026-12-10",
+        "currency": "USD",
+        "po_number": null,
+        "line_items": [
+          {
+            "sku": "SW-SUP-PRM",
+            "description": "Premium Support Plan (annual)",
+            "uom": "Plan",
+            "hsn_sac": null,
+            "quantity": 1,
+            "unit_price": 2400.0,
+            "amount": 2400.0
+          },
+          {
+            "sku": "SW-API-1M",
+            "description": "API Credit Pack (1M calls)",
+            "uom": "Pack",
+            "hsn_sac": null,
+            "quantity": 10,
+            "unit_price": 250.0,
+            "amount": 2500.0
+          },
+          {
+            "sku": "SW-ONB-DAY",
+            "description": "Onboarding Workshop (per day)",
+            "uom": "Day",
+            "hsn_sac": null,
+            "quantity": 2,
+            "unit_price": 1500.0,
+            "amount": 3000.0
+          }
+        ],
+        "subtotal": 7900.0,
+        "tax_lines": [
+          {
+            "name": "Sales Tax (7.25%)",
+            "rate": 7.25,
+            "amount": 572.75
+          }
+        ],
+        "tax_total": 572.75,
+        "total": 8472.75
+      },
+      "expected": {
+        "outcome": "exception",
+        "exception_type": "missing_po",
+        "reason": "Invoice carries no PO reference; a valid PO is mandatory for payment.",
+        "approval_tier": null,
+        "notes": []
+      }
+    }
+  }
+}

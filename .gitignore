@@ -1,0 +1,23 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# node / next
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/
